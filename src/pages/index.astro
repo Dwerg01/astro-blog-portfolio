@@ -18,6 +18,13 @@ const projects = (await getCollection('work'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
+const reviews = [
+	{name: "Zoë", business: "Ériu", portrait: "/assets/reviewers/Zoe Portrait.webp" , review_text: "I\'m proud of you! So much skill involved here in design and practicality its rare to find someone who can do both those jobs so well!"},
+	{name: "Simon", business: "Freelance", portrait: "/assets/reviewers/Simone Portrait.webp" , review_text: "Nardu is a great choice for improving upon any Shopify store needing a developer\'s knowledge and skills. Our team will definitely work with Nardu in the future."},
+	{name: "Marco", business: "Agency Owner", portrait: "/assets/reviewers/Marco Portrait.webp" , review_text: "Very professional, quick and reliable!"},
+	{name: "Mendel", business: "Reseller", portrait: "/assets/reviewers/Mendel Portrait.webp" , review_text: "Nardu was pretty much always available to meet or message, with timely progress updates, and incredible turnaround time."},
+];
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
@@ -27,22 +34,22 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hello, my name is Nardu"
+					tagline="I am a Shopify Developer, based in Johannesburg, South Africa."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Shopify Developer</Pill>
 						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="Portrait photo of Nardu smiling, wearing a white collared shirt"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/portfolio_pic.jpg"
 				/>
 			</header>
 
